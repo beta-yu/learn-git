@@ -6,7 +6,8 @@ git reset --hard HEAD^^
 git reset --hard HEAD~100
 
 #回退后又想回来
-git reset --hard HEAD <9a8ce> #<原先版本的版本号>
+git reset --hard <commit_id> #<原先版本的版本号>
+#可见git reset --hard <commit_id>可移动到指定的版本
 #当你不知道版本号时：
 git reflog #用来记录每一次命令，内含版本号
 #HEAD总是指向当前版本，也就是你回退到那HEAD指向哪
