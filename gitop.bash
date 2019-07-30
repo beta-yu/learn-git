@@ -10,7 +10,7 @@ git reset --hard <commit_id> #<原先版本的版本号>
 #可见git reset --hard <commit_id>可移动到指定的版本
 #当你不知道版本号时：
 git reflog #用来记录每一次命令，内含版本号
-#HEAD总是指向当前版本，也就是你回退到那HEAD指向哪
+#HEAD总是指向当前版本
 
 git add #添加文件至暂存区(stage)
 git commit #把暂存区的所有内容提交到当前分支(如git为我们自动创建的master分支)
@@ -25,3 +25,8 @@ git checkout -- file	#注意有 --
 #撤销掉暂存区的内容
 git reset HEAD <file>
 #此时也就是修改了还未添加到暂存区，就回到了上面1的状态。
+
+#删除文件
+#如果只是在本地删除了文件(rm)而版本库中未删除(git rm),此时想要恢复本地文件：
+git checkout -- <file>
+#git checkout其实是用版本库中的文件替换工作区的文件
