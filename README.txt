@@ -2,3 +2,4 @@
 
 
 我想看看git show [sha1]
+Create a new branch `dev`.
