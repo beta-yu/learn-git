@@ -12,3 +12,5 @@ Test fix conflicts.
 dev -> git stash
 
 bug01 -> modifed
+
+整理自 《廖雪峰的官方网站Git教程》
