@@ -8,7 +8,6 @@ Test fix conflicts.
 
 ``Test git merge --no-ff -m "" `branch`.``
 
-
 dev -> git stash
 
 bug01 -> modifed
