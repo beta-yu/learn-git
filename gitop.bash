@@ -162,3 +162,27 @@ git branch --set-upstream-to origin/<branch-name> <branch-name>
 # 首先切换到你需要打标签的分支上
 # 打标签:
 git tag v1.0
+# 默认标签打在最新提交的commit上
+# 想对之前某次提交打标签，可指定commit-id
+git tag v0.9 742c95f
+# 查看所有标签
+git tag
+# 查看标签信息
+git show v1.0
+# 可以创建带有说明的标签 -a指定标签名 -m指定说明文字
+git tag -a v1.0 -m "version 1.0 released" 742c95f
+
+## 标签总是和commit关联的，如果该commit出现在两个分支上，
+## 那么这两个分支都可以看到该标签
+
+# 删除标签
+git tag -d v1.0
+# 推送某个标签到远程
+git push origin v1.0
+# 一次性推送所有未被推送到远程的标签
+git push origin --tags
+# 标签已经推送到了远程，删除标签
+# 先删除本地标签
+git tag -d v0.9
+# 再从远程删除
+git push origin :refs/tags/v0.9
